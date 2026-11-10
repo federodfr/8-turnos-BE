@@ -1,0 +1,32 @@
+<h1>Servicios</h1>
+
+<div class="container">
+    {{#each paginatedServices.docs}}
+        <div class="card">
+            <p>Nombre: {{this.name}}</p>
+            <p>Descripcion: {{this.description}}</p>
+            <p>Duracion: {{this.duration}}</p>
+            <p>Precio: {{this.price}}</p>
+            <p>Categoria: {{this.category}}</p>
+            <p>Disponible: {{this.available}}</p>
+        </div>
+    {{/each}}
+</div>
+
+<div class="paginate">
+    {{#if paginatedServices.hasPrevPage}}
+        <a href="/services?page={{paginatedServices.prevPage}}">Anterior</a>
+    {{else}}
+        <span class="disabled">Anterior</span>
+    {{/if}}
+    <span>{{paginatedServices.page}}</span>
+    {{#if paginatedServices.hasNextPage}}
+        <a href="/services?page={{paginatedServices.nextPage}}">Siguiente</a>
+    {{else}}
+        <span class="disabled">Siguiente</span>
+    {{/if}}
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/services.js"></script>

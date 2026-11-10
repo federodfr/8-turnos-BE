@@ -1,0 +1,27 @@
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.card {
+    border: 1px solid #666666;
+    border-radius: 12px;
+    padding: 0 16px;
+}
+
+.paginate {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px
+}
+
+.disabled {
+    color: #666666;
+}
